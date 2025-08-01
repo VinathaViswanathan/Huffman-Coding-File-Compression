@@ -1,1 +1,7 @@
 # Huffman-Coding-File-Compression
+
+The Huffman Compression System uses a combination of key data structures and algorithms to efficiently compress and decompress files. It begins with a frequency analysis using a HashMap<Byte, Integer> to count the occurrence of each byte in the input. These frequencies are used to construct a Huffman Tree—a specialized binary tree where each leaf node represents a byte and its frequency—built using a custom MinPriorityQueue that always merges the two least frequent nodes. The tree is traversed recursively (depth-first) to generate a Huffman Code Map (Map<Byte, String>), assigning shorter binary codes to more frequent bytes. During compression, the input file is encoded using this map, and the resulting bit string is packed into actual bytes using bitwise manipulation. For decompression, a reverse map (Map<String, Byte>) is created to decode the binary stream back into original bytes by matching bit prefixes. The system also uses StringBuilder extensively for efficient string concatenation when dealing with binary representations. Overall, the project leverages trees, hash maps, priority queues, and string manipulation to implement Huffman’s optimal prefix coding algorithm in a performant and modular way.
+
+## Final file size acheived through compression
+
+<img width="1106" height="126" alt="Image" src="https://github.com/user-attachments/assets/717733fd-8cc5-4d33-886f-4dac19355d9a" />
